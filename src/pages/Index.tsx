@@ -52,7 +52,7 @@ export default function HomePage() {
           }}
         ></div>
         
-        <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-20">
+        <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-20 pt-20 md:pt-0">
           <div className="max-w-3xl text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
