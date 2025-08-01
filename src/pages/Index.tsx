@@ -52,14 +52,14 @@ export default function HomePage() {
           }}
         ></div>
         
-        <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-20 pt-20 md:pt-0">
+        <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-20 pt-8 md:pt-0">
           <div className="max-w-3xl text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 font-oswald">
+              <h1 className="text-4xl md:text-7xl font-bold text-white mb-20 font-oswald">
                 {t('welcome')}
               </h1>
               <p className="text-lg md:text-xl text-zinc-200 mb-8 max-w-xl mx-auto md:mx-0">
