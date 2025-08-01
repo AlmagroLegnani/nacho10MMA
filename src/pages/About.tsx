@@ -123,8 +123,8 @@ export default function AboutPage() {
               className="relative aspect-square rounded-lg overflow-hidden"
             >
               <img 
-                src="https://images.unsplash.com/photo-1599058918144-1ffabb6ab9a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
-                alt="Gym Training" 
+                src="/img/IMG-20241106-WA0001.jpg" 
+                alt="Nacho Diez MMA Training - Nossa Historia" 
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
