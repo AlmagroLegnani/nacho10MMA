@@ -59,6 +59,11 @@ export default function Header() {
           </div>
         </Link>
 
+        {/* Centro - Selector de Idioma */}
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <LanguageSelector />
+        </div>
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navigationItems.map((item) => (
@@ -74,39 +79,36 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-          <LanguageSelector />
         </nav>
 
-        {/* Mobile Menu */}
-        <Sheet>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="outline" size="icon" className="border-none text-white hover:bg-orange-500/20">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="bg-zinc-900 text-white border-l border-zinc-800">
-            <nav className="flex flex-col space-y-6 mt-10">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`text-xl font-medium transition-colors hover:text-orange-500 ${
-                    isActive(item.path) 
-                      ? "text-orange-500 font-bold" 
-                      : "text-white"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="pt-2">
-                <span className="block text-sm text-gray-400 mb-2">{t('language')}:</span>
-                <LanguageSelector />
-              </div>
-            </nav>
-          </SheetContent>
-        </Sheet>
+        {/* Mobile Navigation */}
+        <div className="flex items-center md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="border-none text-white hover:bg-orange-500/20">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-zinc-900 text-white border-l border-zinc-800">
+              <nav className="flex flex-col space-y-6 mt-10">
+                {navigationItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`text-xl font-medium transition-colors hover:text-orange-500 ${
+                      isActive(item.path) 
+                        ? "text-orange-500 font-bold" 
+                        : "text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );

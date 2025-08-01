@@ -22,7 +22,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
-import { storage } from "@/lib/localStorage";
 import { Instagram, Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -34,6 +33,7 @@ const contactFormSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address."
   }),
+  phone: z.string().optional(),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters."
   })
@@ -51,30 +51,37 @@ export default function ContactPage() {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       message: ""
     }
   });
 
   // Handle form submission
-  const onSubmit = (data: ContactFormValues) => {
-    setIsSubmitting(true);
+    const onSubmit = (data: ContactFormValues) => {
+    // Crear mensaje para WhatsApp
+    const whatsappMessage = `*Nuevo mensaje desde el sitio web de Nacho Diez MMA*
+
+*Nombre:* ${data.name}
+*Email:* ${data.email}
+*Teléfono:* ${data.phone || 'No proporcionado'}
+
+*Mensaje:*
+${data.message}
+
+---
+Enviado desde: nachodiezmma.com`;
+
+    // Número de WhatsApp de Nacho (formato internacional sin +)
+    const whatsappNumber = "5521967674624";
     
-    // Simulate API call
-    setTimeout(() => {
-      // Store in localStorage for demo purposes
-      const messages = storage.get("contactMessages", []);
-      messages.push({
-        ...data,
-        id: Date.now(),
-        date: new Date().toISOString()
-      });
-      storage.set("contactMessages", messages);
-      
-      // Reset form and show success message
-      form.reset();
-      setIsSubmitting(false);
-      toast.success(t('messageSent'));
-    }, 1000);
+    // Crear URL de WhatsApp
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Abrir WhatsApp en nueva ventana
+    window.open(whatsappUrl, '_blank');
+    
+    toast.success(t('messageSent'));
+    form.reset();
   };
 
   // Contact methods
@@ -211,6 +218,24 @@ export default function ContactPage() {
                           <FormControl>
                             <Input 
                               placeholder="your.email@example.com" 
+                              className="bg-zinc-800 border-zinc-700 focus:border-orange-500"
+                              {...field} 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Teléfono (opcional)</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="+55 21 99999-9999" 
                               className="bg-zinc-800 border-zinc-700 focus:border-orange-500"
                               {...field} 
                             />

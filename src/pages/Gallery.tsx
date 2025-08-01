@@ -10,30 +10,27 @@ export default function GalleryPage() {
   const [selectedMedia, setSelectedMedia] = useState<any | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  // Gallery media with categories (images and videos)
+  // Gallery media with photos and videos
   const galleryMedia = [
-    // Imágenes reales primero
+    // Fotos reales
     {
       id: 1,
       src: "/img/Imagen de WhatsApp 2025-08-01 a las 15.23.27_7b1326a5.jpg",
       alt: "Entrenamiento Real - Nacho Diez MMA",
-      category: "training",
       type: "image"
     },
     {
       id: 2,
       src: "/img/Imagen de WhatsApp 2025-08-01 a las 15.23.28_d64482fe.jpg",
       alt: "Sesión de Entrenamiento - Academia",
-      category: "gym",
       type: "image"
     },
-    // Videos de entrenamientos después - todos con la misma imagen thumbnail
+    // Videos de entrenamientos
     {
       id: 3,
       src: "/video/VID-20241106-WA0001.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento de MMA - Sesión 1",
-      category: "training",
       type: "video"
     },
     {
@@ -41,7 +38,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241106-WA0002.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Técnicas de Boxeo - Entrenamiento",
-      category: "training",
       type: "video"
     },
     {
@@ -49,7 +45,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241106-WA0003.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Condicionamiento Físico - Rutina",
-      category: "training",
       type: "video"
     },
     {
@@ -57,7 +52,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241106-WA0004.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Nacho Diez - Demostración de Técnicas",
-      category: "coach",
       type: "video"
     },
     {
@@ -65,7 +59,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241106-WA0005.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento Grupal - Sparring",
-      category: "training",
       type: "video"
     },
     {
@@ -73,7 +66,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241106-WA0006.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento con Equipos - Academia",
-      category: "gym",
       type: "video"
     },
     {
@@ -81,7 +73,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241106-WA0008.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Preparación para Competencia",
-      category: "training",
       type: "video"
     },
     {
@@ -89,7 +80,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241106-WA0009.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento en el Ring",
-      category: "gym",
       type: "video"
     },
     {
@@ -97,7 +87,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241106-WA0010.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Sesión de Muay Thai Intensiva",
-      category: "training",
       type: "video"
     },
     {
@@ -105,7 +94,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241106-WA0011.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Técnicas Avanzadas de MMA",
-      category: "training",
       type: "video"
     },
     {
@@ -113,7 +101,6 @@ export default function GalleryPage() {
       src: "/video/VID-20241107-WA0002.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento Juvenil - Formación",
-      category: "training",
       type: "video"
     },
     {
@@ -121,21 +108,21 @@ export default function GalleryPage() {
       src: "/video/VID-20241107-WA0003.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Nacho Diez - Masterclass",
-      category: "coach",
       type: "video"
     }
   ];
 
   const categories = [
-    { id: "all", name: t('allPhotos') },
-    { id: "training", name: t('trainings') },
-    { id: "gym", name: t('gym') },
-    { id: "coach", name: t('coach') }
+    { id: "all", name: "Todas" },
+    { id: "photos", name: "Fotos" },
+    { id: "videos", name: "Videos" }
   ];
 
   const filteredMedia = selectedCategory === "all" 
     ? galleryMedia 
-    : galleryMedia.filter(media => media.category === selectedCategory);
+    : selectedCategory === "photos"
+    ? galleryMedia.filter(media => media.type === "image")
+    : galleryMedia.filter(media => media.type === "video");
 
   const openModal = (media: any) => {
     setSelectedMedia(media);
