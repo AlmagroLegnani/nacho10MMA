@@ -115,7 +115,7 @@ Enviado desde: nachodiezmma.com`;
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-32 bg-zinc-900 overflow-hidden">
+      <section className="relative pt-40 pb-32 bg-zinc-900 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
