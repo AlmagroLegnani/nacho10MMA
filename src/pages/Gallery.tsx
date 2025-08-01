@@ -135,7 +135,7 @@ export default function GalleryPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-40 pb-32 bg-zinc-900 overflow-hidden">
+      <section className="relative pt-24 md:pt-40 pb-20 md:pb-32 bg-zinc-900 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -157,7 +157,7 @@ export default function GalleryPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-oswald">
               <span className="text-orange-500">{t('gallery').toUpperCase()}</span> DE FOTOS Y VIDEOS
             </h1>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto">
               {t('galleryDesc')}
             </p>
           </motion.div>

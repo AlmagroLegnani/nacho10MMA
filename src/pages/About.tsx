@@ -30,7 +30,7 @@ export default function AboutPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-40 pb-32 bg-zinc-900 overflow-hidden">
+      <section className="relative pt-24 md:pt-40 pb-20 md:pb-32 bg-zinc-900 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -57,7 +57,7 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-oswald">
               {t('about')} <span className="text-orange-500">NACHO DIEZ</span>
             </h1>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto">
               {t('aboutDesc')}
             </p>
           </motion.div>

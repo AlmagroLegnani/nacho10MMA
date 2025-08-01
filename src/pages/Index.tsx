@@ -52,20 +52,20 @@ export default function HomePage() {
           }}
         ></div>
         
-        <div className="container mx-auto px-4 h-full flex items-center relative z-20">
-          <div className="max-w-3xl">
+        <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-20">
+          <div className="max-w-3xl text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-oswald">
+              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 font-oswald">
                 {t('welcome')}
               </h1>
-              <p className="text-xl text-zinc-200 mb-8 max-w-xl">
+              <p className="text-lg md:text-xl text-zinc-200 mb-8 max-w-xl mx-auto md:mx-0">
                 {t('welcomeMessage')}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button 
                   asChild
                   size="lg"
@@ -108,9 +108,9 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-zinc-800 p-8 rounded-lg hover:shadow-orange-500/20 hover:shadow-lg transition-all duration-300"
+                className="bg-zinc-800 p-8 rounded-lg hover:shadow-orange-500/20 hover:shadow-lg transition-all duration-300 text-center md:text-left"
               >
-                <div className="mb-4">
+                <div className="mb-4 flex justify-center md:justify-start">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-white">{feature.title}</h3>
