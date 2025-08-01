@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
-import { ChevronRight, Award, Users, Clock } from "lucide-react";
+import { ChevronRight, Award, UserCheck, Users as Community } from "lucide-react";
 import { storage } from "@/lib/localStorage";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -29,12 +29,12 @@ export default function HomePage() {
       description: t('trainingDesc')
     },
     {
-      icon: <Users className="h-10 w-10 text-orange-500" />,
+      icon: <UserCheck className="h-10 w-10 text-orange-500" />,
       title: t('coaching'),
       description: t('coachingDesc')
     },
     {
-      icon: <Clock className="h-10 w-10 text-orange-500" />,
+      icon: <Community className="h-10 w-10 text-orange-500" />,
       title: t('community'),
       description: t('communityDesc')
     }

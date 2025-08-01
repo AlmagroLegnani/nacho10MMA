@@ -105,7 +105,7 @@ Enviado desde: nachodiezmma.com`;
     {
       icon: <Mail className="h-12 w-12 text-white" />,
       title: "Email",
-      value: "info@nachodiez.com",
+      value: "nachodiez1990@gmail.com",
       action: "mailto:nachodiez1990@gmail.com",
       label: t('sendEmail'),
       bgColor: "bg-orange-500"

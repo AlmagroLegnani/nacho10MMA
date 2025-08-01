@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Timer, Target, Dumbbell } from "lucide-react";
+import { Users, Target, Dumbbell } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function AboutPage() {
@@ -21,9 +21,9 @@ export default function AboutPage() {
       description: "techniqueDesc"
     },
     {
-      icon: <Timer className="h-8 w-8 text-orange-500" />,
-      title: "consistency",
-      description: "consistencyDesc"
+      icon: <Users className="h-8 w-8 text-orange-500" />,
+      title: "community",
+      description: "communityDesc"
     }
   ];
 
