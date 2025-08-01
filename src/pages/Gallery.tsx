@@ -225,7 +225,6 @@ export default function GalleryPage() {
                   </div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                  <p className="text-white font-semibold text-sm">{media.alt}</p>
                   <div className="flex items-center mt-1">
                     {media.type === 'video' && (
                       <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full">VIDEO</span>
