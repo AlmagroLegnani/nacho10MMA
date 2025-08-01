@@ -34,11 +34,16 @@ export default function AboutPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/img/close-up-hand-with-bandage-muscular-man-training-kickboxing-black-blue-smoke.jpg" 
-            alt="Close-up Hand with Bandage - Nacho Diez MMA Training" 
-            className="w-full h-full object-cover"
+            src="/img/Imagen de WhatsApp 2025-08-01 a las 15.23.55_f38ca0a4.jpg" 
+            alt="Nacho Diez MMA Training - Banner Principal" 
+            className="w-full h-full object-cover object-center scale-105 transform transition-transform duration-700 hover:scale-110"
+            style={{ 
+              filter: 'brightness(1.1) contrast(1.2) saturate(1.1)',
+              imageRendering: 'crisp-edges'
+            }}
           />
-          <div className="absolute inset-0 bg-black/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/70 to-black/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent"></div>
         </div>
         
         {/* Content */}

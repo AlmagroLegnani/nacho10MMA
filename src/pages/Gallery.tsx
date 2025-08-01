@@ -12,9 +12,24 @@ export default function GalleryPage() {
 
   // Gallery media with categories (images and videos)
   const galleryMedia = [
-    // Videos de entrenamientos reales - todos con la misma imagen thumbnail
+    // Imágenes reales primero
     {
       id: 1,
+      src: "/img/Imagen de WhatsApp 2025-08-01 a las 15.23.27_7b1326a5.jpg",
+      alt: "Entrenamiento Real - Nacho Diez MMA",
+      category: "training",
+      type: "image"
+    },
+    {
+      id: 2,
+      src: "/img/Imagen de WhatsApp 2025-08-01 a las 15.23.28_d64482fe.jpg",
+      alt: "Sesión de Entrenamiento - Academia",
+      category: "gym",
+      type: "image"
+    },
+    // Videos de entrenamientos después - todos con la misma imagen thumbnail
+    {
+      id: 3,
       src: "/video/VID-20241106-WA0001.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento de MMA - Sesión 1",
@@ -22,7 +37,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 2,
+      id: 4,
       src: "/video/VID-20241106-WA0002.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Técnicas de Boxeo - Entrenamiento",
@@ -30,7 +45,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 3,
+      id: 5,
       src: "/video/VID-20241106-WA0003.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Condicionamiento Físico - Rutina",
@@ -38,7 +53,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 4,
+      id: 6,
       src: "/video/VID-20241106-WA0004.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Nacho Diez - Demostración de Técnicas",
@@ -46,7 +61,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 5,
+      id: 7,
       src: "/video/VID-20241106-WA0005.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento Grupal - Sparring",
@@ -54,7 +69,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 6,
+      id: 8,
       src: "/video/VID-20241106-WA0006.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento con Equipos - Academia",
@@ -62,7 +77,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 7,
+      id: 9,
       src: "/video/VID-20241106-WA0008.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Preparación para Competencia",
@@ -70,7 +85,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 8,
+      id: 10,
       src: "/video/VID-20241106-WA0009.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento en el Ring",
@@ -78,7 +93,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 9,
+      id: 11,
       src: "/video/VID-20241106-WA0010.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Sesión de Muay Thai Intensiva",
@@ -86,7 +101,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 10,
+      id: 12,
       src: "/video/VID-20241106-WA0011.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Técnicas Avanzadas de MMA",
@@ -94,7 +109,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 11,
+      id: 13,
       src: "/video/VID-20241107-WA0002.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Entrenamiento Juvenil - Formación",
@@ -102,7 +117,7 @@ export default function GalleryPage() {
       type: "video"
     },
     {
-      id: 12,
+      id: 14,
       src: "/video/VID-20241107-WA0003.mp4",
       thumbnail: "/img/pair-gloves-boxing-sport.jpg",
       alt: "Nacho Diez - Masterclass",
