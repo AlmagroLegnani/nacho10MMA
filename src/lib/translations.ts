@@ -80,7 +80,7 @@ export const languages: Languages = {
       home: 'Início',
       about: 'Sobre Nós',
       contact: 'Contato',
-      welcome: 'Bem-vindo ao Nacho Diez Muay Thai/Box',
+      welcome: 'Bem-vindo ao Nacho Diez Muay Thai/Boxe',
       welcomeMessage: 'Descubra o poder das artes marciais com treinamento personalizado e uma comunidade apaixonada.',
       features: 'Nossos Serviços',
       training: 'Treinamento Profissional',
