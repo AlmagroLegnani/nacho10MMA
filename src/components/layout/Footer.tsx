@@ -15,7 +15,9 @@ export default function Footer() {
           <div className="space-y-4 text-center md:text-left">
             <Link to="/" className="inline-block">
               <img 
-                src="/assets/images/nachodiezlogo.png" 
+                src="/img/opt/logo.webp"
+                loading="lazy"
+                decoding="async" 
                 alt="Nacho Diez Logo" 
                 className="h-[150px] w-auto rounded-full shadow-lg transition-transform duration-300 hover:scale-105 mx-auto md:mx-0"
               />

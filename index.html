@@ -12,6 +12,32 @@
   <meta property="og:description" content="Train with professional boxer Nacho Diez. Expert training in boxing, Muay Thai and MMA for all skill levels." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="/assets/nachodiezlogo.png" />
+  <link rel="preload" as="image" href="/img/opt/logo.webp" type="image/webp" />
+  <!-- Precarga la imagen principal de la página actual antes de que cargue el JS -->
+  <script>
+    (function () {
+      var heroes = {
+        "/": "hero-guantes",
+        "/about": "hero-nosotros",
+        "/gallery": "hero-galeria",
+        "/contact": "hero-contacto"
+      };
+      var path = location.pathname.replace(/\/+$/, "") || "/";
+      var name = heroes[path];
+      if (!name) return;
+      var link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.type = "image/webp";
+      link.setAttribute("fetchpriority", "high");
+      link.href = "/img/opt/" + name + ".webp";
+      if (name !== "hero-nosotros") {
+        link.setAttribute("imagesrcset", "/img/opt/" + name + "-960.webp 960w, /img/opt/" + name + ".webp 1920w");
+        link.setAttribute("imagesizes", "100vw");
+      }
+      document.head.appendChild(link);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">

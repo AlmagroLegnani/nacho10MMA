@@ -34,8 +34,10 @@ export default function AboutPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/img/Imagen de WhatsApp 2025-08-01 a las 15.23.55_f38ca0a4.jpg" 
-            alt="Nacho Diez MMA Training - Banner Principal" 
+            src="/img/opt/hero-nosotros.webp"
+            fetchPriority="high"
+            decoding="async"
+            alt="Nacho Diez MMA Training - Banner Principal"
             className="w-full h-full object-cover object-center scale-105 transform transition-transform duration-700 hover:scale-110"
             style={{ 
               filter: 'brightness(1.1) contrast(1.2) saturate(1.1)',
@@ -123,8 +125,10 @@ export default function AboutPage() {
               className="relative aspect-square rounded-lg overflow-hidden"
             >
               <img 
-                src="/img/IMG-20241106-WA0001.jpg" 
-                alt="Nacho Diez MMA Training - Nossa Historia" 
+                src="/img/opt/nuestra-historia.webp"
+                loading="lazy"
+                decoding="async"
+                alt="Nacho Diez MMA Training - Nossa Historia"
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -185,8 +189,10 @@ export default function AboutPage() {
               className="relative aspect-square rounded-lg overflow-hidden"
             >
               <img 
-                src="/img/Imagen de WhatsApp 2025-08-01 a las 15.09.18_7df7b610.jpg" 
-                alt="Nacho Diez - Coach Principal MMA" 
+                src="/img/opt/coach-nacho.webp"
+                loading="lazy"
+                decoding="async"
+                alt="Nacho Diez - Coach Principal MMA"
                 className="object-cover w-full h-full"
               />
             </motion.div>

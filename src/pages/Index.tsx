@@ -45,12 +45,15 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-screen">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ 
-            backgroundImage: "url('img/pair-gloves-boxing-sport.jpg')"
-          }}
-        ></div>
+        <img
+          src="/img/opt/hero-guantes.webp"
+          srcSet="/img/opt/hero-guantes-960.webp 960w, /img/opt/hero-guantes.webp 1920w"
+          sizes="100vw"
+          alt=""
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
         
         <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-20 pt-8 md:pt-0">
           <div className="max-w-3xl text-center md:text-left">

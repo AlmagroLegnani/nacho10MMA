@@ -119,7 +119,11 @@ Enviado desde: nachodiezmma.com`;
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/img/portrait-little-boy-child-training-boxing-isolated-black-studio-background-little-sportsman.jpg" 
+            src="/img/opt/hero-contacto.webp"
+            srcSet="/img/opt/hero-contacto-960.webp 960w, /img/opt/hero-contacto.webp 1920w"
+            sizes="100vw"
+            fetchPriority="high"
+            decoding="async"
             alt="Young Boxing Champion - Contact Nacho Diez MMA" 
             className="w-full h-full object-cover"
           />

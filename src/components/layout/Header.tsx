@@ -48,7 +48,10 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-4">
           <img 
-            src="/assets/nachodiezlogo.png" 
+            src="/img/opt/logo.webp"
+            width={80}
+            height={80}
+            fetchPriority="high" 
             alt="Nacho Diez MMA Logo" 
             className="h-16 w-16 md:h-20 md:w-20 rounded-full shadow-lg transition-all duration-300 hover:scale-105 border-2 border-orange-500/20 hover:border-orange-500"
           />

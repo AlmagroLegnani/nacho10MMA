@@ -1,4 +1,4 @@
-import fondo from '../../img/pair-gloves-boxing-sport.jpg';
+const fondo = '/img/opt/hero-guantes.webp';
 
 function Banner() {
   return (

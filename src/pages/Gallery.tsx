@@ -15,13 +15,15 @@ export default function GalleryPage() {
     // Fotos reales
     {
       id: 1,
-      src: "/img/Imagen de WhatsApp 2025-08-01 a las 15.23.27_7b1326a5.jpg",
+      src: "/img/opt/galeria-1.webp",
+      thumbnail: "/img/opt/galeria-1-600.webp",
       alt: "Entrenamiento Real - Nacho Diez MMA",
       type: "image"
     },
     {
       id: 2,
-      src: "/img/Imagen de WhatsApp 2025-08-01 a las 15.23.28_d64482fe.jpg",
+      src: "/img/opt/galeria-2.webp",
+      thumbnail: "/img/opt/galeria-2-600.webp",
       alt: "Sesión de Entrenamiento - Academia",
       type: "image"
     },
@@ -29,84 +31,84 @@ export default function GalleryPage() {
     {
       id: 3,
       src: "/video/VID-20241106-WA0001.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Entrenamiento de MMA - Sesión 1",
       type: "video"
     },
     {
       id: 4,
       src: "/video/VID-20241106-WA0002.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Técnicas de Boxeo - Entrenamiento",
       type: "video"
     },
     {
       id: 5,
       src: "/video/VID-20241106-WA0003.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Condicionamiento Físico - Rutina",
       type: "video"
     },
     {
       id: 6,
       src: "/video/VID-20241106-WA0004.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Nacho Diez - Demostración de Técnicas",
       type: "video"
     },
     {
       id: 7,
       src: "/video/VID-20241106-WA0005.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Entrenamiento Grupal - Sparring",
       type: "video"
     },
     {
       id: 8,
       src: "/video/VID-20241106-WA0006.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Entrenamiento con Equipos - Academia",
       type: "video"
     },
     {
       id: 9,
       src: "/video/VID-20241106-WA0008.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Preparación para Competencia",
       type: "video"
     },
     {
       id: 10,
       src: "/video/VID-20241106-WA0009.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Entrenamiento en el Ring",
       type: "video"
     },
     {
       id: 11,
       src: "/video/VID-20241106-WA0010.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Sesión de Muay Thai Intensiva",
       type: "video"
     },
     {
       id: 12,
       src: "/video/VID-20241106-WA0011.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Técnicas Avanzadas de MMA",
       type: "video"
     },
     {
       id: 13,
       src: "/video/VID-20241107-WA0002.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Entrenamiento Juvenil - Formación",
       type: "video"
     },
     {
       id: 14,
       src: "/video/VID-20241107-WA0003.mp4",
-      thumbnail: "/img/pair-gloves-boxing-sport.jpg",
+      thumbnail: "/img/opt/hero-guantes-960.webp",
       alt: "Nacho Diez - Masterclass",
       type: "video"
     }
@@ -139,7 +141,11 @@ export default function GalleryPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/img/front-view-man-training-boxing-ring.jpg" 
+            src="/img/opt/hero-galeria.webp"
+            srcSet="/img/opt/hero-galeria-960.webp 960w, /img/opt/hero-galeria.webp 1920w"
+            sizes="100vw"
+            fetchPriority="high"
+            decoding="async"
             alt="Front View Man Training Boxing Ring - Nacho Diez MMA Gallery" 
             className="w-full h-full object-cover"
           />
@@ -202,8 +208,10 @@ export default function GalleryPage() {
               >
                 <div className="aspect-square relative">
                   <img
-                    src={media.type === 'video' ? media.thumbnail : media.src}
+                    src={media.thumbnail}
                     alt={media.alt}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300"></div>
